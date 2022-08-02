@@ -1,0 +1,73 @@
+use july2022;
+
+Create table Employee(
+emp_id int primary key,
+emp_name varchar(50) not null,
+emp_mob varchar(12) unique,
+emp_DOJ	Date,
+emp_LeaveBal integer default 15,
+emp_manager_id int , 
+emp_dept varchar(5));
+
+Alter table employee Add Foreign key (emp_manager_id) references Employee(emp_id);
+
+Insert into Employee( emp_id, emp_name, emp_mob, emp_DOJ, 
+		emp_LeaveBal, emp_manager_id, emp_dept)
+	values(100,'murugan',9809899,'2004-10-09',14,NULL,'TRN');
+
+Insert into Employee( emp_id, emp_name, emp_mob, emp_DOJ, 
+		emp_LeaveBal, emp_manager_id, emp_dept)
+	values(125,'babu',979798,'2014-10-09',20,100,'TRN'),
+		(140,'sunil',897867,'2017-09-02',10,100,'TRN');
+    
+
+Insert into Employee( emp_id, emp_name, emp_mob, emp_DOJ, 
+		  emp_manager_id, emp_dept)
+	values(500,'ajay',12345,'2022-07-06', 125,'TRN'),
+		(501,'anil',23456,'2022-07-06', 125,'TRN'),
+        (502,'arvind',234562,'2022-07-06', 140,'TRN');
+select * from employee;
+
+Drop table leaveDetails;
+Create table leaveDetails(
+lev_id int primary key auto_increment,
+lev_No_of_days int,
+lev_start_date date not null,
+lev_end_date date Not null ,
+lev_type enum('CL', 'SL', 'EL') default 'CL',
+lev_status enum('Applied', 'Approved', 'Denied'),
+lev_reasonForapply varchar(50),
+lev_applied  timestamp  Not null,
+lev_commentsForDeny varchar(50),
+emp_id int
+);
+Alter table leaveDetails drop foreign key fk_emp_id;
+
+Alter table leaveDetails 
+	Add Constraint fk_emp_id foreign key(emp_id) references Employee(Emp_id) 
+		  on delete cascade ;
+  -- use either one only. 
+Alter table leaveDetails 
+	Add Constraint fk_emp_id foreign key(emp_id) references Employee(Emp_id) 
+		  on delete set null ;
+describe leaveDetails;
+
+Insert into leaveDetails(lev_No_of_days,lev_start_date,lev_end_date,
+		lev_status,lev_applied,emp_id)
+	value(1,'2022-03-10','2022-03-10','Applied',now(),501);
+    
+Insert into leaveDetails(lev_No_of_days,lev_start_date,lev_end_date,
+		lev_status,lev_applied,emp_id)
+	value(1,'2022-03-10','2022-03-10','Approved',now(),501);
+   
+Insert into leaveDetails(lev_No_of_days,lev_start_date,lev_end_date,
+		lev_status,lev_applied,emp_id)
+	value(2,'2022-03-13','2022-03-14','Approved',now(),500);
+   
+ 
+    
+select * from employee;
+select * from leaveDetails;
+
+
+delete from employee where emp_id = 501;
