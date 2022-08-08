@@ -1,0 +1,346 @@
+db.week.insert([{"day":"monday"},{"day":"tuesday"}, {"day":"wednesday"}])
+
+db.week.drop()
+
+
+db.createCollection("week", { capped : true, size : 1024, max : 4 } )
+
+db.week.insert([{"day":"monday"},{"day":"tuesday"}, {"day":"wednesday"}])
+db.week.insert( {"day":"sunday"} )
+db.week.insert( {"day":"thursday"} )
+db.week.insert([{"day":"friday"},{"day":"saturday"}, {"day":"NOOODay"}])
+
+var date1 = Date()
+db.dtypes.insert(
+	 {
+		name: "vanitha",
+		age: 20,
+		marks: 93.25,
+		pass: true,
+		mobile: null,
+		registeredOn: date1,
+		skills: ["physics", "chemistry"],
+		marks: [  {marks1: 50, marks2: 70 },
+				  {marks1: 64, marks2: 89 } ],
+		Address: {
+					doorno: 12,
+					street: "kkn street",
+					city: "chennai",
+					pincode: "600077"
+				}
+	 })
+	 
+db.dtypes.insert(
+	 {
+		name: "geetha",
+		age: 22,
+		marks: 44.25,
+		pass: false,
+		mobile: null,
+		registeredOn: Date(),
+		skills: ["physics", "chemistry"],
+		marks: [  {marks1: 20, marks2: 20 },
+				  {marks1: 24, marks2: 29 } ],
+		Address: {
+					doorno: 12,
+					street: "kkn street",
+					city: "chennai",
+					pincode: "600077"
+				}
+	 })
+	 
+db.dtypes.insert(
+	 {
+		name: "Goutham",
+		age: 22,
+		marks: 90.25,
+		pass: true,
+		mobile: null,
+		registeredOn: Date(),
+		DOB: new Date("2002-04-03"),
+		skills: ["physics", "chemistry"],
+		marks: [  {marks1: 90, marks2: 90 },
+				  {marks1: 98, marks2: 92 } ],
+		Address: {
+					doorno: 12,
+					street: "Ist Street",
+					city: "Mumbai",
+					pincode: "200002"
+				}
+	 })	 
+	 
+for date example
+ 
+ var date1 = Date()
+ var date2 = new Date()
+ var date3 = new ISODate()
+ 
+ db.showmydates.insert(
+	{
+		d1: date1,
+		nd2: date2,
+		nISOd3: date3
+	}
+ )
+ 
+ db.showmydates.find().pretty()
+ db.showmydates.insert(
+	{
+		d1: Date(),
+		nd2: new Date(),
+		nISOd3: new ISODate()
+	}
+ )
+ 
+ Advanced: 
+ Create a Collection with Document Validation
+ 
+ db.createCollection( "contacts", {
+   validator: { $jsonSchema: {
+      bsonType: "object",
+      required: [ "name", "phone" ],
+      properties: {
+		name: {
+            bsonType: "string",
+            description: "must be a string and is required"
+         },
+         phone: {
+            bsonType: "string",
+            description: "must be a string and is required"
+         },
+         email: {
+            bsonType : "string",
+            pattern : "@mongodb\.com$",
+            description: "must be a string and match the regular expression pattern"
+         },
+         status: {
+            enum: [ "Registered", "Incomplete" ],
+            description: "can only be one of the enum values"
+         }
+      }
+   } }
+} )
+
+db.contacts.insertOne( { name: "Amanda",phone:"989898", status: "Registered" } )
+
+--- this throws error
+db.contacts.insertOne( { name: "Anand",  status: "Incomplete" } )
+-- in order to correct this error  add the phone field
+db.contacts.insertOne( { name: "Anand",  phone:"786532", status: "Incomplete" } )
+
+-- add email details to new document
+db.contacts.insertOne( { name: "Mega",  phone:"52321", 
+		email:"Mega@mongodb.com", status: "Registered" } )
+		
+-- error in email		
+		
+db.contacts.insertOne( { name: "Meena",  phone:"1212121", 
+		email:"meena  ", status: "Registered" } )
+db.contacts.insertOne( { name: "Meena",  phone:"1212121", 
+		email:"meena@gmail.com  ", status: "Registered" } )
+		-- to correct 
+db.contacts.insertOne( { name: "Meena",  phone:"1212121", 
+		email:"meena@mongodb.com", status: "Registered" } )		
+
+		-- error in status
+db.contacts.insertOne( { name: "monica",  phone:"2233", status: "todo" } )		
+db.contacts.insertOne( { name: "monica",  phone:"2233", status: "Registered" } )
+-- adding a new field
+db.contacts.insertOne( { name: "madhu",  phone:"909212", status: "Registered",city:"Mumbai" } )
+
+db.contacts.find().pretty()
+
+-- find the students who got marks 93.25
+db.trn.find({marks:93.25})
+-- find the students whose age is 20
+db.trn.find({age:20})
+
+
+-- specify the column name and age only with or without id
+db.trn.find({marks:93.25} , {_id:1, name:1, age:1 } )
+db.trn.find({marks:93.25} , {_id:0, name:1, age:1 } )
+
+--- for aggregation examples 
+
+db.inventory.insertMany([
+   { item: "journal", qty: 25, size: { h: 14, w: 21, uom: "cm" }, status: "A" },
+   { item: "notebook", qty: 50, size: { h: 8.5, w: 11, uom: "in" }, status: "A" },
+   { item: "paper", qty: 100, size: { h: 8.5, w: 11, uom: "in" }, status: "D" },
+   { item: "planner", qty: 75, size: { h: 22.85, w: 30, uom: "cm" }, status: "D" },
+   { item: "postcard", qty: 45, size: { h: 10, w: 15.25, uom: "cm" }, status: "A" }
+]);
+
+db.inventory.insertMany([
+   { item: "journal", qty: 5, size: { h: 14, w: 21, uom: "cm" }, status: "B" },
+   { item: "notebook", qty: 23, size: { h: 6, w: 21, uom: "in" }, status: "B" },
+   { item: "paperwhite", qty: 100, size: { h: 8.5, w: 11, uom: "in" }, status: "C" }
+   
+]);
+
+db.inventory.find( {} ).pretty()
+
+Specify Equality Condition:
+db.inventory.find( { status: "D" } )
+
+The following example retrieves all documents from the 
+inventory collection where status 
+equals either "A" or "D":
+db.inventory.find( { status: { $in: [ "A", "D" ] } } )
+
+
+Retreive the qty less than 30
+db.inventory.find({qty: { $lt: 30 } } ).pretty()
+db.inventory.find({qty: { $gt: 30 } } ).pretty()
+db.inventory.find({qty: { $gte: 50 } } ).pretty()
+db.inventory.find({qty: { $ne: 50 } } ).pretty()
+db.inventory.find({qty: 50 }).pretty()
+
+use of in condition
+db.inventory.find( { status: { $in: [ "A", "B" ] } } ).pretty()
+
+use of not in condition
+db.inventory.find( { status: { $nin: [ "A", "B" ] } } ).pretty()
+
+Specify AND Conditions
+The following example retrieves all documents in the inventory collection where 
+the status equals "A" and qty is less than ($lt) 30:
+db.inventory.find( { status: "A", qty: { $lt: 30 } } ).pretty()
+using the $ and condition
+
+db.inventory.find( { $and: [ { status: "A" }, { qty: { $lt: 30 } } ] } ).pretty()
+
+Specify OR Conditions
+The following example retrieves all documents in the collection 
+where the status equals "A" or qty is less than ($lt) 30:
+db.inventory.find( { $or: [ { status: "A" }, { qty: { $lt: 30 } } ] } ).pretty()
+
+Specify AND as well as OR Conditions
+=====
+db.inventory.find( {
+     status: "A",
+     $or: [ { qty: { $lt: 30 } }, { item: "notebook" } ]
+} ).pretty()
+
+-- and example repeated.
+
+db.inventory.find( { $and: [ { status: "A" }, { qty: { $lt: 70 } } ] } ).pretty()
+db.inventory.find( { status: "A", qty: { $lt: 70 } } ).pretty()
+db.inventory.find( {$nor:[{item: "journal"},{status: "A"} ] }).pretty()
+ db.inventory.find(   { status: "A", qty: {$not: {$lt: 30} } } ).pretty()
+ , qty:{$lt: 30}
+ 
+ -- NOT details 
+ $not performs a logical NOT operation on the specified <operator-expression> and selects the documents that do not match the <operator-expression>. This includes documents that do not contain the field.
+ Remember that the $not operator only affects other operators and cannot check fields and documents independently. So, use the $not operator for logical disjunctions and the $ne operator to test the contents of fields directly.
+ -- below is wrong example.
+  db.inventory.find(  {$not:[{ status: "A" }] }) .pretty()
+  
+  -- where the item does  starts with the letter p.
+  
+  db.inventory.find(   { item:   /^p.*/   }) .pretty()
+    -- where the item does not starts with the letter p.
+  db.inventory.find(   { item: { $not: /^p.*/ } }) .pretty()
+  select from inventory where item  not like 'p%'
+  
+  
+  ---
+  Match an Embedded/Nested Document
+For example, the following query selects all documents 
+where the field size equals the document { h: 14, w: 21, uom: "cm" }:
+db.inventory.find( { size: { h: 14, w: 21, uom: "cm" } } )
+
+Query on Nested Field
+	Specify Equality Match on a Nested Field:
+db.inventory.find( { "size.uom": "in" } )
+	Specify Match using Query Operator:
+	db.inventory.find( { "size.h": { $lt: 15 } } )
+
+	
+Specify AND Condition
+	db.inventory.find( { 
+		"size.h": { $lt: 15 }, 
+		"size.uom": "in", 
+		status: "D" } ).pretty()
+		
+		
+		-- adding a new field  called tag
+db.inventory.insertMany([
+   { item: "journal", qty: 25, tags: ["blank", "red"], size: { h: 14, w: 21, uom: "cm" } },
+   { item: "mat", qty: 85, tags: ["gray","red"], size: { h: 27.9, w: 35.5, uom: "cm" } },
+   { item: "mousepad", qty: 25, tags: ["gel", "blue", "red"], size: { h: 19, w: 22.85, uom: "cm" } }
+])
+
+
+	db.inventory.find( { tags: ["red", "blank"] } )   -- output
+	db.inventory.find( { tags: [ "blank", "red"] } ) -- first record as output
+	
+	db.inventory.find( { tags: { $all: ["red", "blank"] } } )
+	db.inventory.find( { tags: "red" } )
+	
+db.inventory.insertMany([
+   { item: "journal", qty: 25, tags: ["blank", "red"], dim_cm: [ 14, 21 ] },
+   { item: "notebook", qty: 50, tags: ["red", "blank"], dim_cm: [ 14, 21 ] },
+   { item: "paper", qty: 100, tags: ["red", "blank", "plain"], dim_cm: [ 14, 21 ] },
+   { item: "planner", qty: 75, tags: ["blank", "red"], dim_cm: [ 22.85, 30 ] },
+   { item: "postcard", qty: 45, tags: ["blue"], dim_cm: [ 10, 15.25 ] }
+	]);
+	
+	
+	db.inventory.find( { dim_cm: { $lt: 25 } } )
+	db.inventory.find( { dim_cm: { $gt: 15, $lt: 20 } } )
+	
+	Query for Null or Missing Fields
+https://docs.mongodb.com/manual/tutorial/query-for-null-fields/
+db.inventory.insertMany([
+   { _id: 1, item: null },
+   { _id: 2 }
+])
+db.inventory.find( { item: null } )
+
+-- the update updates only one record.
+
+db.inventory.insertMany([
+   { item: "paper", qty: 35, size: { h: 14, w: 21, uom: "cm" }, status: "A" },
+   { item: "paper", qty: 50, size: { h: 8.5, w: 11, uom: "in" }, status: "D" },
+   { item: "paper", qty: 95, size: { h: 8.5, w: 11, uom: "in" }, status: "D" },
+   { item: "paper", qty: 75, size: { h: 22.85, w: 30, uom: "cm" }, status: "E" },
+   { item: "postcard", qty: 45, size: { h: 10, w: 15.25, uom: "cm" }, status: "A" }
+]);
+
+db.inventory.find( { item: "paper" } )
+db.inventory.update ( {item:"paper"}, 
+	{
+		$set:{status: "P"}
+	})
+	
+ db.inventory.update ( {item:"paper"}, 
+	{
+		$set:{qty: 999 }
+	})
+db.inventory.updateMany ( {item:"paper"}, 
+	{
+		$set:{qty: 999 }
+	})
+	
+	
+-- replace one
+db.inventory.replaceOne(
+   { item: "paper" },
+   { item: "paper", qty: 20, size: { h: 20, w: 20, uom: "cm" }, status: "Z" }
+)
+
+-- remove all
+db.inventory.remove( { item: "paper" } )
+
+-- save method
+
+db.inventory.save (  { item: "paperSave", qty: 20, size: { h: 20, w: 20, uom: "cm" }, status: "X" })
+db.inventory.find( { item: "paperSave" } )
+
+-- get one object id and replace as below
+db.inventory.save ( 
+{ "_id" : ObjectId("62f0b1b4e590bdab779d5127"), 
+"item" : "NewReplacePaper", "qty" : 89, "size" : 
+{ "h" : 23, "w" : 88, "uom" : "in" }, "status" : "S" } )
+
+

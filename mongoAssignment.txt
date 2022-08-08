@@ -1,0 +1,30 @@
+create a collection called employee and 
+insert the following records appropriately.
+Create 5 employee document
+let he have HR, FN, Admin
+title  manager, assistant, clerk
+using insert, insertmany
+
+
+(emp101, mary,9000, HR, assistant )
+(emp102, ram,18000, HR, manager )
+(emp103, ram,20000, FN, clerk )
+(emp104, megha,16000, Admin, manager )
+(emp105, ajay,9000, FN, clerk )
+
+
+
+query all the employee salary = 9000
+employee salary between 15000 and 20000
+employee name like mary, ram
+employee name not like mary, ram
+employee who are not in department hr and title is manager
+employee in admin with salary greater 10000 and title is clerk or assistant
+update the clerk as officer ( many, one, )
+delete the employee whose empid is emp105
+
+(emp106, arvind,21000, FN, assistant )
+use save to add a new employee document
+use save to replace an existing employee document
+
+
