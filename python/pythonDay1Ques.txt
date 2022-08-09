@@ -1,0 +1,31 @@
+
+Python Day 1 Questions:
+
+1 print the sum of square numbers between 1 to n . take n as input 
+
+2 get 3 marks for students and print the average of marks using while loop
+
+3  Given the text “Hello World”, take the slice “World”
+
+4 Write a program that stores a number and keeps trying to get user input 
+until the user enters the number correctly. As soon as the correct number 
+is entered, it prints: Correct!
+
+5 count for numbers in the given string and print.
+Eg. Welcome2022 - output is 6 
+
+6 get a string as input. count the no.of vowels the string and print 
+
+7 get a string as input.  and character position i as input.
+remove the ith character from the string
+
+8 Write a program to accept an input string from the user and toggle the character
+cases.use string functions 
+For example,  str= "Hello How Are You?"  
+O/p : hELLO hOW aRE yOU 
+
+9 Try changing the seperator string from a space to an underscore
+
+10 Write a program that asks user name, phone number and preferred programming language
+ 
+
