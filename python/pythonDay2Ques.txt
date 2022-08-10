@@ -1,0 +1,39 @@
+-- for Day 2
+1 Write a program that has two lists and print True if they have at 
+least one member in common, False otherwise.  
+
+2 Create a list of names. print the longest name from the list of elements
+
+3 Given 2 lists . create 3rd list by picking only the odd index element from first list and even index elements from second list
+
+4 Given a list, remove element at index 4. add it an element at index 2 and at end of list.
+ 
+5 Iterate a given list, count the occurance of each element and create dictionary to show the count of each element
+ 
+6 create a new list by extracting keys from a dictionary
+ 
+7 return a new set of identical items from a given in 2 sets
+ 
+8 Update set 1 by adding items from set 2 except common items
+
+9 write a function to find a factorial for a given number
+
+10  write a function that adds all the odd numbers separately  and even number separately  from the variable number of arguments
+
+11 A train runs between chennai to mumbai , 
+	the cost of Ist class A/C ticket is 5000,
+	IIIrd A/C is 2500, II class 600
+ they  provides discount 15 percent to children of age below 15 
+	and discount 25 percent for the senior citizen of age above 70
+Get the name, age of the person buying ticket and display the ticket cost.
+
+Write method that gets the input from user
+write a method that calculate the ticket cost, by passing neccessary arguments
+Write a method to display the name, age, type of ticket and cost of ticket
+
+
+
+ 
+ 
+ 
+
