@@ -1,0 +1,36 @@
+1 Make a Python program that prints your name.
+2 Make a program that solves and  shows the summation of 64 + 32.
+
+3 repeat a string and number
+
+4 Create two list of words and 
+join them,  to create a new one 
+ 
+5 Try changing the seperator string from a 
+space to an underscore.
+
+6 Make a program that creates a random number 
+ and stores it into x.
+
+7 Write a program that asks user name, phone number and preferred programming language
+
+8 Make a program that asks the number between 1 and 10. 
+	If the number is out of range the program should display “invalid number”. 
+
+9 Make a program that lists the countries in the set
+	check if 'India' is in set
+10 Make a multiplication table using a loop
+		Output the numbers 1 to 10 backwards 
+		using a loop
+
+11 Make a program that displays the states in India, display the states 
+starts with 'M'
+
+12 Given the range 1 to 100m create a list of odd and even numbers
+
+13 Take a slice of the list below:
+
+pizzas = [“Hawai”,”Pepperoni”,”Fromaggi”,”Napolitana”,”Diavoli”]
+
+14 Given the text “Hello World”, take the slice “World”
+

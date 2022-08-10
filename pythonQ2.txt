@@ -1,0 +1,25 @@
+1  A train runs between chennai to mumbai , 
+the cost of Ist class A/C ticket is 5000
+IIIrd A/C is 2500
+II class 600
+
+it provides discount 15 percent to children of age below 15 
+and discount 25 percent for the senior citizen of age above 70
+Get the name, age of the person buying ticket and display
+
+Write method that gets the input from user
+write a method that calculate the ticket cost
+Write a method to display the name, age, type of ticket and cost of ticket
+
+2  Also try create a class buyTrainticket from the problem 
+and display the solution
+
+3. Create a class point with attribute x and y
+ and derive a class line from point, 
+	add attribute linetype and linecolor
+	add method drawline
+ derive a class rectangle from line add attribute fillcolor
+  add method fillcolor 
+  add method drawborderandfill which calls fillcolor and drawline methods
+  Use appropriate constructor and magic methods to display the details
+  
