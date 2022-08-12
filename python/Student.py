@@ -5,6 +5,8 @@ class Student:
         self.name = name
         self.age = age
 
+
+#instance method
     def displayGreetings(self):
         print( " hai, great day ", self.name, self.age )
 

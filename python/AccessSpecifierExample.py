@@ -17,6 +17,7 @@ class Student:
     def mydetails(self):
         print( ' name ', self.name , ' age: ', self.__age ,  " rollNo: ", self._rollno)
 
+
 stName = input("enter name ")
 stAge = int( input ( " enter age ") )
 stRollNo = int ( input( "enter rollno") )
@@ -24,6 +25,9 @@ stRollNo = int ( input( "enter rollno") )
 st1 = Student(stName, stAge, stRollNo )
 print( st1.name )
 print( st1._rollno)
+
+# print( st1.__age)  # throw error
+
 
 st1.showMyage()
 st1.set_age( 22)
