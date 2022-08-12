@@ -1,0 +1,82 @@
+Exercise on git
+
+
+Create folder mygit                                          
+change ur current working folder to mygit                                           
+initialize git                                           
+create a file test.txt                                             
+add the line - hello how do you do                                                 
+check the status of git
+add it to staging and commit it with message "exercise1"
+create a branch LB
+inside the branch LB modify the test.txt
+                                 add the following text
+                                             
+save and commit  with message "exercise2"
+go back to master branch
+see the difference between master and LB
+create a branch from master as CC       
+create a new file 'mystory.txt'
+write 'this is the title of the story'
+add and commit the same in CC branch
+list all the branches
+                              
+see the diff between master and Cc
+goto CC     
+modify the CC by saying -  'this is about harry potter'
+stage the file mystory.txt
+after staging you feel that this is not about Harry Potter but about batsman
+unstage the file back to working directory
+                                           
+modify the mystory.txt to
+'this is about batsman'
+stage and commit
+                                      
+modify the mystory.txt to 
+' detailing about batsman- he will fly  using his magic wings'
+Now you feel that your story is not correct. Go back to the last committed version
+                                
+see the git status
+                                   
+see the file in cat  command
+                               
+goto LB
+                            
+goto master
+                               
+comeback to CC
+                             
+
+end 
+====
+
+
+
+Create folder mygit2
+                                          
+change ur current working folder to mygit2
+                                           
+initialize git
+
+create  a file welcome.txt
+type welcome, save and commit
+create a branch bOne
+create a branch bTwo
+switch to bOne -> add the line mavericks, save and commit
+switch to bTwo -> add the line training , save and commit
+switch to master
+do git merge with bOne
+do git merge with bTwo -> fix the conflicts.
+
+the master should display the following. at the end.
+welcome
+mavericks
+training
+
+--- try the same using git rebase also.
+
+
+
+
+
+
