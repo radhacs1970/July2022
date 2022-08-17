@@ -1,0 +1,51 @@
+1. Write a Palindrome for a string and for a integer
+
+Palindrome String :
+
+Level, Radar, Madam, Civic, Refer
+
+Palindrome Numbers :
+
+12321, 171, 45854, 8427248, 1441
+****
+2.   Write a java program or function to find the most frequent element in array. Your program should take an array of integers as input and 
+	1. find out the most frequently occurring element in that array
+	2. Using Map fill the number - as key and its number of occurence in the array as frequency.
+
+******
+3. similar to above - To Find Frequency Of All Digits In single Number In Java?
+For example, if 21757132 is input number then frequency of all digits in this number are (1 –> 2, 2 –> 2, 3 –> 1, 5 –> 1, 7 –> 2)
+
+*******
+4.  Write a java program to remove duplicate elements from the given array. Your program or method should take an array of integers as input and should return another array which should contain only unique elements from the input array. For example, if {4, 3, 2, 4, 9, 2} is the input array then your program or method should return {4, 3, 2, 9} as output.
+Use hashset or treeset to do this program
+
+******
+5.  Write a java program to check whether given number belongs to Fibonacci series or not. For example, 34 belongs to Fibonacci series where as 51 doesn’t belongs to Fibonacci series.
+Fibonacci Series : 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89……..
+******
+6. 1 2 3 4 5 6 7 8 9 8 7 6 5 4 3 2 1
+     1 2 3 4 5 6 7 8 7 6 5 4 3 2 1   
+       1 2 3 4 5 6 7 6 5 4 3 2 1 
+         1 2 3 4 5 6 5 4 3 2 1 
+           1 2 3 4 5 4 3 2 1 
+             1 2 3 4 3 2 1
+               1 2 3 2 1
+                 1 2 1
+	           1
+
+Create the above pattern
+******
+7. How To Find Sum Of All Digits Of A Number In Java?
+******
+
+8. Write a program to find given two strings are anagram or not. 
+Two strings are called anagrams if they contain same set of characters but in different order. For example, “Dormitory – Dirty Room”, “keep – peek”,  “School Master – The Classroom” are some anagrams.
+
+****
+9. How To Find An Armstrong Number In Java?
+A number is called an Armstrong number if it is equal to sum of its digits each raised to the power of number of digits in it. For example: 153, 371, 407, 9474, 54748 are some Armstrong numbers.
+
+****
+10. Given your birthday 24-01-1995 as input calculate your age in years, month and days.
+******

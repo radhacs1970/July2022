@@ -1,0 +1,7 @@
+Solve the following Programs:
+1.
+Create a class 'Degree' having a method 'getDegree' that prints "I got a degree". It has two subclasses namely 'Undergraduate' and 'Postgraduate' each having a method with the same name that prints "I am an Undergraduate" and "I am a Postgraduate" respectively. Call the method by creating an object of each of the three classes.
+
+2.A class has an integer data member 'i' and a method named 'printNum' to print thevalue of 'i'. Its subclass also has an integer data member 'j' and a method named 'printNum' to print the value of 'j'. Make an object of the subclass and use it to assign a value to 'i' and to 'j'. Now call the method 'printNum' by this object.
+
+3.Suppose a class 'A' has a static method to print "Parent". Its subclass 'B' also has a static method with the same name to print "Child". Now call this method by the objects of the two classes. Also, call this method by an object of the parent class refering to the child class i.e. A obj = new B().

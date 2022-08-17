@@ -1,0 +1,11 @@
+A Stationery shop sells few products such as notebooks, pen and pencils
+It has total quantity of 100 notebooks each of 10 rs , 30 pens each of 25rs and
+200 pencils each of 1 rs.
+Create a java class to save this data.
+When a customer enters the shop there is a automated system that 
+shows the list of products available and asks the product code to be selected 
+along with the quantity.
+Upon choosing either single or multiple product it shows the total cost of the products and on confirmation of customer buying the items it reduces the total quantity of the respective items and shows the list again for the another customer.
+The program will never end until user press the product code as 999
+Create Command line interface to interact with the products.
+

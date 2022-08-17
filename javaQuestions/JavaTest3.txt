@@ -1,0 +1,4 @@
+The IPL is going on and chennai super kings with captain dhoni is playing against Royal challenger virat kohili with total 5 players and and 6 overs  for each side
+Write a program  find the batsmen individual score and also who won the match.
+( if 0 he is out and 2,4,6 added to batsmen score)
+(Hint use Math.random function and Hashmap to store the batsmen score)
