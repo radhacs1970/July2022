@@ -1,4 +1,4 @@
-1. Craete aproject called samplejdbc
+1. Create aproject called samplejdbc
   mvn archetype:generate
   groupid - com.hexa
   artifactid - samplejdbc
