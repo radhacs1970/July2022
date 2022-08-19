@@ -8,7 +8,7 @@ Cus_name varchar(255),
 Cus_phone varchar(255),
 Cus_Email varchar(255),
 Cus_walletbal integer,
-Cus_Login_id integer,
+Cus_Login_id integer unique,
 Cus_Password varchar(255)
 );
 INSERT INTO Customer VALUES

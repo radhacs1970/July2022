@@ -35,6 +35,7 @@ public class Custselectdb {
         int custWalletBal = rs.getInt("Cus_walletbal");
         int custLoginId = rs.getInt("Cus_Login_id");
         String custPassword = rs.getString("Cus_Password");
+       
 
         String output = 
             "Customer [custId= " + custId + 
