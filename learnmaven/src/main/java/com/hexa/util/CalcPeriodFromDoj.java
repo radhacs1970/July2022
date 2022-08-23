@@ -18,7 +18,7 @@ public static void main(String[] args) {
     
     LocalDate dojDate = LocalDate.parse(doj,df);
     // Number of days between today and date of joining.
-    Period pf = Period.between(curDate, dojDate);
+    Period pf = Period.between( dojDate, curDate );
     System.out.println(" years " + pf.getYears() + 
                         " months " + pf.getMonths() + 
                         " days " + pf.getDays() );
