@@ -1,0 +1,255 @@
+ Which of the following git command that downloads your repository from GitHub to your computer?
+A. git fork
+B.git commit
+C.git clone
+D.git push
+Ans : git clone
+
+ Which of the following shortcut to staging all the changes you have?
+A. git push -am "Message"
+B.git add.
+C.git commit add.
+D.git commit.
+Ans git add.
+
+4) Identify the correct commit syntax for all changes with a message?
+A. git add -a "I'm coding"
+B.git commit -am "I'm coding"
+C.git message -am "I'm coding"
+D.None of these
+ANs: B
+
+5) What comes first, staging with git add. or committing with git commit?
+A. Committing with git commit
+B.Staging your commits with git add
+C.None of these
+ANs : B 
+
+10) What is the function of ‘GIT PUSH’ in GIT?
+A. ‘GIT PUSH’ updates remote refs.
+B.‘GIT PUSH’ updates remote refs along with associated objects.
+C.‘GIT PUSH’ remote refs along with associated objects.
+D.None of these
+
+ans B
+
+
+1) What is an alternative to merging in git?
+A. Basing
+B.Rebasing
+C.Both 1 and 2
+D.None of these
+
+ANs: b
+
+What is the use of ‘git log’?
+A. by author
+B. date
+C. content
+Ans C 
+
+Which of the following isn't a Git configuration scope?
+A. User
+B. System
+C. Local
+D. Global
+
+Ans: B system 
+
+18) Which command should you use to initialize a new Git repository?
+A. git init
+B.git install
+C.git start
+D.git bash
+Ans: A
+
+22) How do you save the current state of your code into the git version control?
+A. Using git stage
+B.Using git commit
+C.Using git push
+D.Using git add
+
+Ans B.Using git commit 
+
+
+23) Which of the following is not a git command?
+A. git clean
+B. git clone
+C. git commit
+D. Git roll
+Ans D;
+
+24) Which of these git client commands creates a copy of the repository?
+A. clone
+B. update
+C. import
+D. checkout
+Ans a 
+
+27) Command is useful for getting a high-level overview of the project history
+A. git rebase
+B.git reset --hard
+C.git log --author=""
+D.git log --oneline
+Ans : D 
+
+29) Command line environment is used for interacting with git
+A. Git Lab
+B. GitHub
+C. Git Boot
+D. Git Bash
+Ans: D 
+
+ Which command creates an empty git repository in the specified directory?
+A. git init
+B. git log ..
+C. git reset
+D. None of the above
+Ans A
+
+8. Which two configuration properties does the tool expect to be configured after installing Git and prior to issuing the first commit?
+  
+A email address and password
+B username and password
+C username and IP address
+D username and email address
+Ans D
+
+10. Which of the following commands is used in switching between branches?
+  
+Git branch
+Git checkout
+Git switch
+Git merge
+Ans : Git checkout
+
+13. Git reset --hard used to?
+  
+A uncommitted the changes, unstage the changes
+B uncommitted the changes
+
+C uncommitted the changes, unstage the changes, delete the changes
+
+D Unstage the changes
+
+Ans: uncommitted the changes, unstage the changes, delete the changes
+
+ 
+ Command to check the created, modified, deleted files in gitbash before Commit?
+ 
+git show
+git log
+git status
+all of the above
+Ams : git status
+
+ 
+ 
+ After you add a file, it becomes
+  
+Committed
+Modified
+Staged
+Untracked
+Ans: Staged
+
+3. Which of the following is true you when you use the following command?
+git add -A
+  
+All new and updated files are staged
+Files are staged in alphabetical order.
+All new files are staged
+Only updated files are staged
+
+Ans: Only updated files are staged
+
+5. .......... is equivalent to fetch and merge
+  
+pull
+syncronize
+push
+fetch
+Ans: pull 
+
+
+7. How do you supply a commit message to a commit?
+  
+Git message "My first commit"
+Git add "My first commit"
+Git commit "My first commit"
+Git commit -m "I'm coding!"
+
+Ans: Git commit -m "I'm coding!"
+
+
+ 
+15. What is the area where uncommitted changes are temporarily held after adding?
+ 
+Staging Area
+Unstaging Area
+
+ 
+20. Which of the following commands will merge branch -a into the master branch?
+ 
+git merge master and git checkout branch-a
+git checkout branch-a and git merge master
+git checkout master and git merge branch-a
+git merge branch-a and git checkout master
+
+
+Ans : git checkout master and git merge branch-a
+.
+
+
+ 
+23. Which file can you configure to ensure that certain files are never committed to the local Git repository?
+  
+Ignore.git
+.gitignore
+gitignore.txt
+git.ignore
+
+.gitignore
+ 
+
+24. You can type git status at any point while in a git controlled directory to check the status of your files?
+  
+True
+False
+
+34. What are the different options for git reset?
+ 
+--hard
+--soft
+--mixed
+All of above
+
+Ans :  Al of the above
+
+35. Which of the following commands will create a new branch?
+ 
+git checkout new-branch
+git checkout -b new-branch
+git clone new-branch
+git create-branch new-branch
+
+Ans: B 
+
+36. Which of the following is one of Git's powerful features?
+  
+Rooting
+Leafing
+Branching
+Planting
+Ans: Branching 
+
+44. Checks out a branch from repository into the working directory.
+ 
+git init
+git checkout
+git add
+git commit
+
+Ans: git Checkout 
+
+ 

@@ -1,0 +1,91 @@
+1. Which of the following is not type of Maven Repository?
+A. Local
+B. Remote
+C. Maven Central
+D. Maven Local
+Ans: D 
+
+2. Which of the following command removes the target directory with all the build data before starting the build process?
+A. mvn clean
+B. mvn build
+C. mvn compile
+D. mvn site
+Ans: mvn clean
+
+
+4. Which of the following is not a maven goal?
+A. clean
+B. package
+C. install
+D. debug
+
+
+Answer: Option D
+
+5. Which of the following is not a dependency scope in Maven?
+A. Compile
+B. Test
+C. System
+D. Export
+
+
+
+Answer: Option D
+
+
+2. What is the sequence in which Maven looks for the resources ?
+A. Remote-> Maven Central - > Local
+B. Local -> Maven Central - > Remote   
+C. Remote-> Local -> Maven Central
+D. Maven Central -> Local -> Remote
+Ans = B 
+
+Q 1 - Which of the following aspects of a project can be managed using Maven?
+
+A - Builds
+B - Documentation
+C - Reporting
+D - All of the above.
+
+Ans D 
+
+Q 2 - Which of the following configuration element is present in POM.xml?
+
+A - build profiles
+B - project version
+C - Both of the above.
+D - None of the above.
+Ans C 
+
+Q 3 - Which of the following phase in maven life cycle installs the package into the local repository, for use as a dependency in other projects locally?
+
+A - integration-test
+B - verify
+C - install
+D - deploy
+Ans = C install 
+
+Q 6 - Which of the following scope indicates that dependency is to be provided by JDK or web-Server/Container at runtime?
+
+A - compile
+B - provided
+C - runtime
+D - test
+Ans: B 
+
+Q 8 - Which of the following is correct about groupId in Maven pom.xml?
+
+A - This is an Id of project's group.
+B - This is generally unique amongst an organization or a project.
+C - Both of the above.
+D - None of the above.
+Ans: C 
+
+Q 10 - Which of the following is true about Maven central repository?
+
+A - This repository is managed by Maven community.
+B - It is not required to be configured.
+C - It requires internet access to be searched.
+D - All of the above.
+
+Ans: D 

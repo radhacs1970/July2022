@@ -1,0 +1,227 @@
+1. Which provides accessibility to classes and interface? 
+a. import  
+b. Static import
+c. All the above
+
+2. The Object class is not a parent class of all the 
+classes in java by default.
+True
+False
+
+3. which access specifiers can be used for a class so 
+that it’s members can be accessed by a different class 
+in the different package? 
+a. Private
+b. Public 
+c. Protected 
+d. None of the above
+Ans b,c
+
+4. Which is a mechanism where one object acquires 
+all the properties and behaviors of the parent object? 
+a. Inheritance  
+b. Encapsulation
+c. Polymorphism
+d. None of the above
+
+Ans a 
+
+5. Which is a technique in Java in which a class can 
+have any number of constructors that differ in parameter lists? 
+a. Constructor overloading  
+b. Method overloading
+c. Operator overloading
+Ans: Constructor overloading
+
+6. Which method of 'Class' class is used to register the driver 
+class and the method is used to dynamically load the driver 
+class? 
+
+a. forName()  
+b. getConnection()
+c. createStatement()
+d. executeQuery()
+
+Ans forName()
+
+7. If a subclass has the same method as declared in the 
+ parent class it is known as ______. 
+a. Method overriding  
+b. Method overloading
+c. Constructor overloading
+d. None of the above
+Ans: Method overriding 
+
+8.  What should be expression1 evaluate to in using ternary operator as in this line?
+
+ expression1 ?  expression2  :  expression3
+a) Integer
+b) Floating – point numbers
+c) Boolean
+d) None of the mentioned
+
+Ans: Boolean
+
+9. class operators 
+    {
+        public static void main(String args[])
+        {
+            int var1 = 5; 
+            int var2 = 6;
+            int var3;
+            var3 = ++ var2 * var1 / var2 + var2;
+            System.out.print(var3);
+        } 
+    }
+a) 10
+b) 11
+c) 12
+d) 56
+
+Ans: 12
+
+10. When does method overloading is determined?
+a) At run time
+b) At compile time
+c) At coding time
+d) At execution time
+
+Ans: at compile time 
+
+11. Which concept of Java is achieved by combining methods and attribute into a class?
+a) Encapsulation
+b) Inheritance
+c) Polymorphism
+d) Abstraction
+Ans: Encapsulation
+
+12.  Method overriding is combination of inheritance and polymorphism?
+a) True
+b) false
+Ans: true
+13. What will be the output of the following Java code?
+
+class San
+{
+ public void m1 (int i,float f)
+ {
+  System.out.println(" int float method");
+ }
+ 
+ public void m1(float f,int i);
+  {
+  System.out.println("float int method");
+  }
+ 
+  public static void main(String[]args)
+  {
+    San s=new San();
+        s.m1(20,20);
+  }
+}
+a) int float method
+b) float int method
+c) compile time error
+d) run time error 
+Ans: compile time error
+
+14. Which of these method of Object class is used to obtain class of an object at run time?
+a) get()
+b) void getclass()
+c) Class getClass()
+d) None of the mentioned
+ANs: Class getClass()
+
+15. Which of these keywords can be used to prevent inheritance of a class?
+a) super
+b) constant
+c) class
+d) final
+
+Ans: final 
+
+16.  What will be the output of the following Java program?
+
+   class A 
+   {
+	int i;	int j;
+        A() 
+        {           i = 1;            j = 2;        }
+   }
+   class Output 
+   {
+        public static void main(String args[])
+        {
+             A obj1 = new A();
+             A obj2 = new A();
+			System.out.print(obj1.equals(obj2));
+        }
+   }
+a) false
+b) true
+c) 1
+d) Compilation Error
+Ans: false 
+
+17. If a class inheriting an abstract class does not define all of its function then it will be known as?
+a) Abstract
+b) A simple class
+c) Static class
+d) None of the mentioned
+
+Ans: abstract 
+
+18.  What will be the output of the following Java code?
+
+    class A 
+    {
+        public int i;
+        private int j;
+    }    
+    class B extends A 
+    {
+        void display() 
+        {
+            super.j = super.i + 1;
+            System.out.println(super.i + " " + super.j);
+        }
+    }    
+    class inheritance 
+   {       public static void main(String args[])
+        {
+            B obj = new B();
+            obj.i=1;
+            obj.j=2;   
+            obj.display();     
+        }
+   }
+a) 2 2
+b) 3 3
+c) Runtime Error
+d) Compilation Error
+Ans:  Compilation Error
+
+
+19. What is the process of defining a method in a subclass having same name & type signature as a method in its superclass?
+a) Method overloading
+b) Method overriding
+c) Method hiding
+d) None of the mentioned
+Ans: Method overriding
+
+20. What will be the output of the following Java program?
+
+ class Alligator 
+ {
+  public static void main(String[] args) 
+   {
+   int []x[] = {{1,2}, {3,4,5}, {6,7,8,9}};
+   int [][]y = x;
+   System.out.println(y[2][1]);
+   }
+ }
+a) 2
+b) 3
+c) 7
+d) Compilation Error
+Ans: 7
