@@ -1,0 +1,26 @@
+* {
+  line-height: 30px;
+}
+
+body {
+  margin-left: 100px;
+  margin-top: 50px;
+  margin-right: 100px;
+  margin-bottom: 50px;
+  border : 1px solid blue;
+  padding: 10px ;
+}
+
+a:link {
+  background-color: chartreuse;
+  color:darkgreen;
+}
+a:visited {
+  background-color: orange;
+  color:darkred;
+}
+a:hover{
+  font-size: 32px;
+  background-color: cornflowerblue;
+  color:black;
+}

@@ -1,0 +1,29 @@
+ 
+
+table,tr,th,td{
+  border-collapse: collapse;
+  background-color: coral;
+  padding: 3px;
+  text-align: center;
+  
+  margin:auto;
+  margin-right: 0px;
+  width:50%;
+  line-height: 50px;
+  
+}
+
+tr,th,td {
+  border:  2px dashed darkgreen;
+  color: navy;
+  font-size: 24px;
+}
+td {
+  vertical-align:top;
+}
+.formattext{
+  font-size: 24px;
+  border: 1px solid orange;
+  padding: 2px;
+}
+
