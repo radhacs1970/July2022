@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+    <h1> Arrays</h1>
+
+    <h2> 
+    <script>
+      let fruits = ['Apple', 'Mango', 'Orange'];
+      
+      fruits.push("strawberry");
+      document.write("<br> fruit array length is " + fruits.length );
+      fruits.pop();
+      document.write("<br> after single pop - fruit array length is " + fruits.length );
+      
+      let text = "";
+      for (let x in fruits) { // in is index location
+          text += x + ' ' + fruits[x] + "  <br>"  ;
+      }
+      document.write('<br> content of fruits are: <br>' + text );
+      
+      text = " ";
+      for (let x of fruits) { //of get the value.
+        text += x + "   <br> ";
+      }
+      document.write('<br> content of fruits are using for -of : <br>' + text );
+    </script>
+
+    <p id="mycar" style="background-color: gray; color:white"></p>
+    <p id="mycolor" style="background-color: pink;"></p>
+     
+    <script>
+      let cars = new Array('BMW','Audi','WagonR','Alto');     
+      let colors = new Array();
+      colors[0]='red';
+      colors[1]='green';
+      colors[2]='blue';
+      colors[3]='violet';
+      colors[4]='magenta';
+      colors[5]='CYAN';
+
+      text =  ' ';
+      function myCallBackFunction(item, index){
+        text += index + ": " + item + "<br>"; 
+      }
+      cars.forEach(myCallBackFunction);
+      document.getElementById("mycar").innerHTML = 
+        " updating mycar " + text;
+      
+
+        text = ' ';
+      for( let k = 0; k < colors.length; k ++ ){
+        text += colors[k] + " ";
+      }
+      document.getElementById("mycolor").innerHTML = 
+        " updating color " + text;
+    </script>
+    </h2>
+    
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+    <h1> Welcome to javascript learning programme</h1>
+    <script>
+      alert("Hello all");
+      var ret = confirm( " Are you sure you want to continue");
+      if( ret == true ){
+        document.write("<h3> User CONFIRMS TO CONTINUE....</h3>");
+      } else {
+        document.write("<h3> User WANTS TO STOP!!! ....</h3>");
+      }
+    </script>
+  <h2> Understanding the prompt popup !!!! </h2>
+    <script>
+      var myname = prompt("Enter your Name" ); //,"radha"
+      document.write ( "<h3> my name is " + myname + ". </h3>");
+    </script>
+  <hr>
+  <h2> How internally data types behave....</h2>
+    <script>
+// Now the fun !!!! 
+    let k1 = '1'+2;
+    document.write(k1 + "<br>");//12
+
+    let k2 = 2 + '1'; //21
+    document.write(k2 + "<br>");
+
+    k2 = 2 +2 + '1';
+    document.write(k2 + "<br>");//41
+    k2 = '1' + 2+ 2;
+    document.write(k2 + "<br>");//122
+    k2 =  6 -'2';
+    document.write(k2 + "<br>");//4
+    k2 = '6' / '2';
+    document.write(k2 + "<br>");//3
+    
+     
+    let apple = '2';
+    let orange = '3';
+    document.write ( apple + orange + "<br>"); //23
+    document.write (+apple + +orange + "<br>");  //5
+    document.write ( ('2' > 1) +  "<br>" ); //true
+    document.write ( ( '01' == 1) +  "<br>" ); //true
+    document.write ( ( true == 1) +  "<br>" ); //true
+    document.write ( ( false == 0) +  "<br>" ); //true
+    let a = 0;
+    document.write ( Boolean(a) +  "<br>" ); //false
+    </script>
+  </body>
+</html>

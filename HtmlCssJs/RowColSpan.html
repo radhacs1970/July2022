@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title>Rowand column span </title>
+    <style>
+      table, tr,th,td {
+         
+         margin-left: 100px;
+         margin-top: 50px;
+         margin-right: 100px;
+         margin-bottom: 75px;
+         border : 1px solid blue;
+         padding: 5px;
+       }
+        
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>Row 1 col1 </td>
+        <td>Row 1 col2 </td>
+        <td>Row 1 col3 </td>
+        <td>Row 1 col4 </td>
+      </tr>
+      <tr>
+        <td>Row 2 col1 </td>
+        <td colspan="3" style="background-color: chartreuse;">Row 2 col2   
+         &nbsp; &nbsp;Row 2 col3  
+         &nbsp; &nbsp; Row 2 col4 </td>
+      </tr>
+      <tr>
+        <td rowspan = "2" colspan = "2" 
+          style="background-color: cornflowerblue;">
+            Row 3 col1   &nbsp; &nbsp; Row 3 col2
+          <br> Row 4 col1  &nbsp; &nbsp; Row 4 col2 </td>
+        <td> Row 3 col3 </td>
+        <td rowspan="2" style="background-color: aqua;">Row 3 col4 <br>Row 4 col4</td>
+      </tr>
+      <tr>
+         
+         
+        <td>Row 4 col3 </td>
+         
+      </tr>
+    </table>
+  </body>
+</html>
