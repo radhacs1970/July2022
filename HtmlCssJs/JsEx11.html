@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      function showfocus(fc){
+        var str = "hai..";
+         
+        if (fc == 1 ) {
+          str = " FOCUS IS IN USERNAME CONTROL";
+        } else if ( fc==2){
+          str = " FOCUS IS IN PASSWORD CONTROL";
+        }
+        document.getElementById("myresult").innerHTML =str;
+             
+      }
+      function changevalue(){
+        let text1 = document.getElementsByName('uname')[0].value;
+        
+        alert(text1 );
+    }
+    </script>
+  </head>
+  <body>
+    <h1> DOM Examples.....</h1>
+    <form>
+      <fieldset>
+        <legend>Login details:</legend>
+        <label> Enter User Name:
+          <input   type="text" name="uname" 
+          placeholder="Enter your name" 
+          value="Megna" required 
+          minlength="3" maxlength="20"
+          autofocus onfocus="showfocus(1)"
+          onchange="changevalue()"        
+          /><br><br>
+        </label>
+
+        <label>Enter password :
+          <input type="password" name="upassword" value="" 
+            placeholder="Enter your password" 
+            
+            onfocus="showfocus(2)">
+          <br><br>
+        </label>
+
+      </fieldset>
+    </form>
+<!-- onblur="alert('losing focus')"  -->
+    <hr>
+    <div id="myresult"></div>
+  </body>
+</html>

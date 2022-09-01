@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      function calculate(a ,  b ){
+        let c = a + b;
+        return c;
+      }
+      function multiply ( a, b=3 ,c=1,d=2){
+        if( isNaN(a))
+          a = 1;
+        let x = a * b * c * d ;
+        return x;
+      }
+    </script>
+  </head>
+  <body>
+     
+      <h2> How to write a normal function- implemented in head and
+        invoked from body tag
+      </h2>
+      <script>
+        let k = calculate(10, 30);
+        document.write("<br> " + k + " is the calculated value <br>");
+        k = multiply(10, 30,3,4);
+        document.write("<br> " + k + " is the multiply value <br>");
+        k = multiply('hai' );
+        document.write("<br> " + k + " is the multiply value <br>");
+
+        </script>
+  </body>
+</html>

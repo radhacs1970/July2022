@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+
+      let user = {
+        name: " Ajay ",
+        age:23,
+        salary:5000,
+        dispdetails : function () {
+            document.write( "<br/> " + user.name + user.age + "  "  +
+            user.salary + "<br/> ")
+          },
+        greetName( msg="hai..." ){
+          document.write("<br> Greetings  "+ this.name + " !!!! <br>" + msg );
+          }
+          
+        };
+      let emp = {
+        empid: 123,
+        salary: 9700
+      };
+      function calcCommission(){
+        let cm = this.salary * 0.2;
+          document.write( "<br> My salary is " +  this.salary +
+                " <br> My commission is " +  cm );
+      }
+
+    </script>
+  </head>
+  <body>
+    <h1> Javascript object example variable name, data, methods</h1>
+    <script>
+      user.dispdetails();
+      user.greetName( "good day ");
+      user.myComm = calcCommission;
+      user.myComm();
+
+      emp.myempcom = calcCommission;
+      emp.myempcom();
+    </script>
+  </body>
+</html>

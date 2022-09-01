@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<script>
+  function cmToIn(length){
+    return length/2.54;
+  }
+  function inToCm(length){
+    return length * 2.54;
+  }
+
+  function convert( fn, length){
+    return fn(length);
+  }
+
+  function sum(a,b){
+    return a + b ;
+  }
+  function average( a,b, fn){
+    return fn(a,b)/2;
+  }
+
+  let show = function (){
+    console.log(" show method invoked... now changing arrow function");
+  }
+  let showArrow = () => console.log(" !!! now changing arrow function");
+  let sumArrow = (a,b) => { return a+b;};
+</script>
+  </head>
+  <body>
+    <script>
+        let inches = convert(cmToIn, 10);
+        let cm = convert(inToCm, 10);
+        console.log(" inches " + inches );
+        console.log(" centimeter " + cm );
+
+        document.write("<br> " + " inches " + inches );
+        document.write("<br> " + " centimeter " + cm );
+
+        console.log( " average is " + 
+          average(10,20,sum));
+
+          document.write("<br> " + " average of 2 numbers " +
+          average(20,80,sum) );
+
+          show();
+          showArrow();
+          console.log( " using sumArrow method " + sumArrow(2,3));
+    </script>
+  </body>
+</html>

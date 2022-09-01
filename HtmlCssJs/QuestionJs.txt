@@ -1,0 +1,24 @@
+1 Create a variable myname inside a block 
+  and using the prompt get the value
+a  display the name from inside a block.
+b.  display the name from outside a block
+See the result. ( to display use document.write )
+
+2. 
+create a variable with color with var and assign green
+create a variable maxcolor as const and assign 10 as value
+create a variable mycolor with let and assign red
+
+display the content using document.write.
+
+change the value of maxcolor to 99 and see the result
+create mycolor variable again inside a block and assign
+green value and display the result
+
+3.
+Create a array of food items
+add usin push, and use different types of for loop to
+print the values.
+use slice to display last three items in the array
+use splice(2,2 ) and see the result.
+

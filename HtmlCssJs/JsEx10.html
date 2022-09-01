@@ -1,0 +1,34 @@
+<html>
+<head>
+<script language="JavaScript">
+ 
+
+function alertmessage() {
+alert("The window has been resized!");
+}
+window.onresize= alertmessage;
+
+function changepic() {
+      document.getElementById("imgM").src = "rupees.jpg";
+    }
+    function outpic() {
+      document.getElementById("imgM").src = "gold1.jpg";
+    }
+
+    function openGoggleWindow() {
+      window.open("https://www.google.com");
+    }
+
+</script>
+</head>
+<body>
+Please resize the window.
+<h2> Mouse over example...</h2>
+  <img id="imgM" src="gold1.jpg" 
+        onmouseover="changepic()" 
+        onmouseout="outpic()" />
+
+  <hr>
+<input type="button" onclick="openGoggleWindow()" value =" open google " />
+</body>
+</html>

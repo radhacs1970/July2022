@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+    <h1> Arrays with filter and map </h1>
+    <p id="paraId"> empty </p>
+    <script>
+      var marks=[90,80,75,70,87,61,32,45,99,88,77];
+
+      function check(value){
+        let passmark = 75;
+        return value>passmark;
+      }
+      document.write( " example for array filter " + 
+      " passed students are " + marks.filter(check));
+      document.write("<br>");
+      
+      function resultMark (value){
+        if ( value > 75 )
+          return " pass - " + value;
+        else
+          return " fail - " + value;
+      }
+      let result = marks.map( value =>  resultMark(value)  );
+      document.write(result);
+
+      document.getElementById("paraId").innerHTML="<h3>   head one  </h3>" 
+    </script>
+  </body>
+</html>
